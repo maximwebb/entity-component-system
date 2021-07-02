@@ -1,11 +1,10 @@
 #pragma once
-
+#include <iterator>
+#include <typeindex>
+#include <unordered_map>
+#include <vector>
 #include "Entity.h"
 #include "Component.h"
-#include <vector>
-#include <unordered_map>
-#include <typeindex>
-#include <iterator>
 
 template<class... Components>
 class Group {

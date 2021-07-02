@@ -1,7 +1,7 @@
 #include <iostream>
-#include <utility>
-#include <Group.h>
 #include <unordered_set>
+#include <utility>
+#include "Group.h"
 #include "Manager.h"
 #include "System.h"
 
@@ -55,8 +55,14 @@ int main() {
         mass->Print();
     }
 
-    System s1(m);
-    System s2(m);
+	CollisionEvent ev1(500);
+	TestEvent ev2("Hello World!");
+
+	TestSystem1 s1(m);
+	TestSystem2 s2(m);
+
+    m.QueueEvent<CollisionEvent>(ev1);
+    m.QueueEvent<TestEvent>(ev2);
 
     return 0;
 }
